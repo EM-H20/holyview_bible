@@ -150,14 +150,6 @@ class _BibleScreenState extends State<BibleScreen> {
               );
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.edit),
-            title: const Text("메모 추가", style: TextStyle(fontSize: 20)),
-            onTap: () {
-              Navigator.pop(context);
-              _showMessage("메모 기능 구현 예정");
-            },
-          ),
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:holyview/screens/memo_screen.dart';
 import 'package:holyview/service/bible_service.dart'; // BibleService 임포트
 import 'package:flutter/material.dart'; // Flutter Material 디자인 임포트
 import 'package:flutter/services.dart'; // 📌 HapticFeedback 임포트
@@ -75,7 +76,7 @@ class _HeaderState extends State<Header> {
                   ))
               .toList(),
           icon: const Icon(
-            Icons.menu_book,
+            Icons.view_list_rounded,
             color: Color(0xFF424874),
           ),
           color: const Color(0xFFDCD6F7),
@@ -83,6 +84,15 @@ class _HeaderState extends State<Header> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25.0),
           ),
+        ),
+        IconButton(
+          icon: const Icon(Icons.note_add),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MemoScreen()),
+            );
+          },
         ),
         const SizedBox(width: 10),
       ],
