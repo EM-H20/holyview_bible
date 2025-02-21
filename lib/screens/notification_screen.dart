@@ -47,6 +47,15 @@ class NotificationScreen extends StatelessWidget {
               const SizedBox(height: 20),
               _buildSection(
                 context,
+                title: "비영리 앱 안내",
+                content: [
+                  _buildNotificationPoint(context,
+                      "본 앱은 비영리 목적으로 제작되었으며, 어떠한 이용료나 광고도 포함되지 않습니다. 사용자의 편의를 위해 무료로 제공됩니다."),
+                ],
+              ),
+              const SizedBox(height: 20),
+              _buildSection(
+                context,
                 title: "번역 관련 고지",
                 content: [
                   _buildNotificationPoint(context,
